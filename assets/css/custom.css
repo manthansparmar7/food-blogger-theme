@@ -1,0 +1,214 @@
+.sticky-sidebar {
+    position: sticky;
+    top: 30px;
+}
+
+.site-logo img {
+    max-width: 140px;  /* Adjust width as needed */
+    height: auto;      /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;    /* Center the logo */
+    border-radius: 15px;
+}
+
+.col-md-8 {
+    min-height: 300px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col-md-4 {
+    min-height: 300px;
+}
+
+.no-content {
+    min-height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipes-universal-pagination {
+    margin-bottom: 20px; /* Add space below pagination */
+}
+.recipes-universal-pagination ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.recipes-universal-pagination ul li {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #fab439;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 35px;
+    text-align: center;
+}
+.recipes-universal-pagination ul li.active:hover {
+    cursor: pointer;
+    background: #e26920;
+    color: white;
+}
+
+.recipes-universal-pagination ul li.inactive {
+    background: #7E7E7E;
+}
+.recipes-universal-pagination ul li.selected {
+    background: #e26920;
+    color: white;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Added space at the bottom */
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adds spacing between pagination links */
+}
+.pagination .page-numbers {
+    display: inline-block;
+    padding: 10px 15px; /* Increased padding for better touch targets */
+    margin: 5px; /* More spacing for better readability */
+    background: #fab439;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.pagination .page-numbers:hover {
+    background: #e26920;
+    color: white;
+}
+.pagination .current {
+    background: #e26920;
+    color: white;
+}
+.pagination .prev,
+.pagination .next {
+    background: #7E7E7E;
+}
+.pagination .prev:hover,
+.pagination .next:hover {
+    background: #e26920;
+}
+
+.sidebar {
+    background: #fff3cd; /* Light yellow background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.sidebar .list-group-item {
+    background: #ffeeba; /* Soft yellow */
+    border: none; /* Remove borders */
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.sidebar .list-group-item a {
+    text-decoration: none;  /* Remove underline */
+    color: #b71c1c; /* Deep red */
+    font-weight: 600; /* Slightly bold */
+    display: block;
+    padding: 4px 9px;
+    border-radius: 7px;
+    transition: all 0.3s ease-in-out;
+}
+
+footer {
+    background: #fff3cd; /* Light yellow background */
+    padding: 15px 0;
+    margin-top: 40px;
+}
+footer a {
+    text-decoration: none; 
+    color: #b71c1c; /* Deep red */
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+footer a:hover {
+    text-decoration: none; 
+    background: #b71c1c; /* Deep red */
+    color: #ffeb3b; /* Bright yellow */
+    padding: 7px 12px;
+    border-radius: 5px;
+}
+footer p {
+    margin-bottom: 5px;
+}
+footer .text-muted {
+    color: #8b6c3a; /* Darker shade of yellow */
+}
+
+.sidebar .list-group-item:hover {
+    background: #b71c1c; /* Deep red */
+}
+.sidebar .list-group-item a:hover {
+    color: #ffeb3b; /* Bright yellow */
+    text-decoration: none;
+}
+.sidebar .list-group-item.active {
+    background: #b71c1c !important;
+    color: #ffeb3b !important;
+    font-weight: bold;
+}
+
+.card-img-top {
+    width: 100%; /* Ensure full width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Crop and fit within the space */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.single-recipe .featured-image img {
+    width: 100%; /* Full width */
+    height: 400px; /* Fixed height */
+    object-fit: cover; /* Ensures images fill the area without stretching */
+    border-radius: 10px; /* Optional for rounded corners */
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .container {
+        text-align: center; /* Centers text on small screens */
+    }
+    .container img {
+        margin: 0 auto; /* Centers images */
+        display: block;
+    }
+    .pagination {
+        flex-wrap: wrap; /* Allows wrapping if needed */
+        margin-top: 15px;
+        margin-bottom: 30px; /* Extra space at bottom */
+    }
+    .recipes-universal-pagination {
+        margin-bottom: 40px; /* Increase spacing for mobile */
+    }
+    .pagination .page-numbers {
+        padding: 8px 12px; /* Slightly smaller padding */
+        font-size: 13px; /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        margin-bottom: 40px; /* Even more space for smaller screens */
+    }
+    .pagination .page-numbers {
+        padding: 6px 10px; /* Adjust padding */
+        font-size: 12px;
+    }
+}
